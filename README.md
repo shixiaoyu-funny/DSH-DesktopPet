@@ -4,11 +4,9 @@
 
 ## 安装
 
-发布到 npm 后，可通过插件市场安装，或：
+插件市场收录后可直接一键安装；也可以使用 GitHub Release 中的预构建包：
 
-```text
-dsh plugin --profile <profile> add dsh-plugin-raven-pet
-```
+<https://github.com/shixiaoyu-funny/DSH-DesktopPet/releases/latest>
 
 本地开发时：
 
