@@ -2,7 +2,15 @@
 
 仓库：<https://github.com/shixiaoyu-funny/DSH-DesktopPet>  
 包名：`dsh-plugin-raven-pet`  
-npm 名称检查：registry 返回 404，基本可用（发布前再确认一次）。
+发布方式：**GitHub Release tarball**（已上传 v0.1.0），npm 可选。
+
+## 当前状态
+
+- 代码已推送到 GitHub `main`；
+- GitHub Release `v0.1.0` 已创建，附有 `dsh-plugin-raven-pet-0.1.0.tgz`（43.7MB）；
+- 仓库 topic `dsh-plugin` 已添加；
+- npm 发布被账号 2FA 策略拦住，不阻塞上架：目录条目改用 `tarball:`；
+- 目录 PR 需等仓库创建满 1 天（见下）。
 
 ## 时间门槛
 
@@ -27,33 +35,17 @@ git push -u origin main --force
 
 > `--force` 仅用于仓库目前只有一个占位 README 的情况；如果仓库里已有其他内容，先合并再推送。
 
-## 2. 发布 npm（推荐）
+## 2. npm（可选）
+
+如果以后要发布 npm：
 
 ```bash
 npm login
 npm publish --access public
-npm view dsh-plugin-raven-pet version
 ```
 
-发布前确认：
-
-- `package.json` 的 `private` 已删除；
-- `files` 包含 `assets/**`（35 个文件，解包约 41.7MB，tarball 约 42.7MB）；
-- `assets/icon-180.png` 已存在（26KB）；
-- `dsh.bundle` 与 `cordis.patch.yml` 存在；
-- npm 账号已开启 2FA。
-
-如果不发 npm，可以：
-
-```bash
-npm pack
-```
-
-把生成的 `dsh-plugin-raven-pet-0.1.0.tgz` 上传到 GitHub Release，并在目录条目里加：
-
-```yaml
-tarball: https://github.com/shixiaoyu-funny/DSH-DesktopPet/releases/download/v0.1.0/dsh-plugin-raven-pet-0.1.0.tgz
-```
+当前账号 2FA 关闭，npm 发布返回 403，要求 2FA 或带 bypass 2FA 的 granular token。  
+**不发布 npm 也可以上架**：目录条目已经带 `tarball:`，市场会优先用它。
 
 ## 3. 提交目录 PR
 

@@ -5,3 +5,4 @@ description:
   en: Raven is a floating desktop pet for the DSH web GUI that reacts to the current session's agent activity with transparent WebM animations, click interactions and a CNY balance display.
   zh: Raven 是显示在 DSH 网页界面里的悬浮桌宠，会随当前会话的 Agent 活动做出动作反应，并支持点击互动与账户余额显示。
 icon: https://raw.githubusercontent.com/shixiaoyu-funny/DSH-DesktopPet/main/assets/icon-180.png
+tarball: https://github.com/shixiaoyu-funny/DSH-DesktopPet/releases/download/v0.1.0/dsh-plugin-raven-pet-0.1.0.tgz
